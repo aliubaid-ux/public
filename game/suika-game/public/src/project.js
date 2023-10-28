@@ -1,4 +1,4 @@
-let dataloadState = false
+let dataloadState = true
 let suikaTimerStart = performance.mark("suikaTimerStart");
 let suikaTimerSuika
 let suikaTimerEnd
@@ -1885,7 +1885,7 @@ window.__require = function e(t, n, o) {
                 var TweetButton = document.getElementById("TweetButton");
                 TweetButton.addEventListener('mousedown', TweetButtonAction);
                 function TweetButtonAction(){
-                    var twiTxt = `https://twitter.com/share?hashtags=Watermelongame&url=https://suikagame.io&text=The record for the watermelon game currently being played is ${e.sceneScore.string} Points.`
+                    var twiTxt = `https://twitter.com/share?hashtags=Watermelongame&url=https://wordle-unlimited.us/suika-game/&text=The record for the watermelon game currently being played is ${e.sceneScore.string} Points.`
                     window.open(twiTxt);
                 }
 
@@ -2095,7 +2095,7 @@ window.__require = function e(t, n, o) {
                             let myscore_text = [];
                             let myscore_ranking_count = 1;
                             for (let item of myscore) {
-                                const fruits_icon = '/public/res/raw-assets/' + fruits_id(myscore_ranking_count) + '.png'
+                                const fruits_icon = './public/res/raw-assets/' + fruits_id(myscore_ranking_count) + '.png'
                                 myscore_text.push('<li class="list-ranking-item">' + '<img src="' + fruits_icon + '" />' + JSON.stringify(item.score) + '</li>');
                                 myscore_ranking_count++;
                             }
@@ -2109,7 +2109,7 @@ window.__require = function e(t, n, o) {
                                 let minutes = parseInt(Math.floor(seconds / 60));
                                 seconds = parseInt(seconds % 60);
 
-                                const fruits_icon = '/public/res/raw-assets/50/5035266c-8df3-4236-8d82-a375e97a0d9c.png'
+                                const fruits_icon = './public/res/raw-assets/50/5035266c-8df3-4236-8d82-a375e97a0d9c.png'
                                 my_suika_score_text.push('<li class="list-ranking-item">' + '<img src="' + fruits_icon + '" />' + `${minutes}分${seconds}秒` + '</li>');
                                 my_suika_score_count++;
                             }
@@ -2119,7 +2119,7 @@ window.__require = function e(t, n, o) {
                             let weekscore_text = [];
                             let weekscore_ranking_count = 1;
                             for (let item of weekscore) {
-                                const fruits_icon = '/public/res/raw-assets/' + fruits_id(weekscore_ranking_count) + '.png'
+                                const fruits_icon = './public/res/raw-assets/' + fruits_id(weekscore_ranking_count) + '.png'
                                 if (weekscore_ranking_count > 3) {
                                     weekscore_text.push('<li class="list-ranking-item-small col-4"><span class="rank_icon-small rank_'+ weekscore_ranking_count +'">' + weekscore_ranking_count + '</span>' + '<img src="' + fruits_icon + '" />' + JSON.stringify(item.score) + '</li>');
                                 } else {
@@ -2138,7 +2138,7 @@ window.__require = function e(t, n, o) {
                                 let minutes = parseInt(Math.floor(seconds / 60));
                                 seconds = parseInt(seconds % 60);
 
-                                const fruits_icon = '/public/res/raw-assets/50/5035266c-8df3-4236-8d82-a375e97a0d9c.png'
+                                const fruits_icon = './public/res/raw-assets/50/5035266c-8df3-4236-8d82-a375e97a0d9c.png'
                                 if (suika_score_count > 3) {
                                     suika_score_text.push('<li class="list-ranking-item-small col-4"><span class="rank_icon-small rank_'+ suika_score_count +'">' + suika_score_count + '</span>' + '<img src="' + fruits_icon + '" />' + JSON.stringify(item.suikaTime) + '</li>');
                                 } else {
